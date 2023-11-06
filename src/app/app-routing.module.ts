@@ -6,6 +6,8 @@ import { UsersComponent } from './pages/users/users.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
+import { LegalComponent } from './pages/legal/legal.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:'users', component:UsersComponent},
   {path:'events', component:EventsComponent},
   {path:'connection', component:ConnectionComponent},
-  {path:'inscription', component:InscriptionComponent}
+  {path:'inscription', component:InscriptionComponent},
+  {path:'legal', component:LegalComponent},
+  {path:'contact', component:ContactComponent}
 ];
 
 @NgModule({

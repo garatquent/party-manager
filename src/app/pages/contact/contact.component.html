@@ -1,0 +1,33 @@
+<section>
+    <h1>Need help ?</h1>
+    <h2>Leave a message :</h2>
+    <form (submit)="helloThere()">
+        <label for="">Name</label>
+        <input name="Name" [(ngModel)]="contact.name" #ctlName="ngModel" required minlength="8" >
+        <span *ngIf="ctlName.value.length < 8">This field needs at least 8 characters</span>
+
+        <label for="">Firstname</label>
+        <input name="Firstname" [(ngModel)]="contact.firstname">
+        
+        <label for="">Street</label>
+        <input name="Street" [(ngModel)]="contact.address.street">
+        
+        <label for="">Town</label>
+        <input name="Town" [(ngModel)]="contact.address.town">
+        
+        <label for="">Age</label>
+        <input name="Age" [(ngModel)]="contact.age">
+        
+        <label for="">Mail</label>
+        <input name="Mail" [(ngModel)]="contact.mail">
+        
+        <label for="">Status</label>
+        <input name="Status" [(ngModel)]="contact.status">
+        
+        <label for="">Infos</label>
+        <input name="Infos" [(ngModel)]="contact.infos">
+        
+        <button>Send Message</button>
+        <button type="reset">Changed My Mind</button>
+    </form>
+</section>

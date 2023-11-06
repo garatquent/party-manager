@@ -11,6 +11,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { EventsComponent } from './pages/events/events.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
+import { LegalComponent } from './pages/legal/legal.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { ConnectionComponent } from './pages/connection/connection.component';
     ProfileComponent,
     EventsComponent,
     InscriptionComponent,
-    ConnectionComponent
+    ConnectionComponent,
+    LegalComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

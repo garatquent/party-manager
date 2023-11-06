@@ -1,1 +1,23 @@
-<p>events works!</p>
+<section>
+    <h1>The events :</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Type</th>
+                <th>Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of listEvents">
+                <td> {{ u.name }} </td>
+                <td> {{ u.date }} </td>
+                <td> {{ u.location }} </td>
+                <td> {{ u.type }} </td>
+                <td> {{ u.capacity }} </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

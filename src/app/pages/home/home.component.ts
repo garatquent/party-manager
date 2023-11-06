@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title = 'party-manager'
-  description = 'Party Manager, l\'application de gestion de vos soirées !'
+  description = 'Party Manager, the app that manage your parties !'
 }
