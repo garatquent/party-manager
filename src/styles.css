@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 
+:root {
+    --pink80: rgb(230, 18, 124);
+    --neon-blue: #04d9ff;
+}
+
 html, body{
     padding:0;
     margin:0;
+    background-color: var(--pink80);
+    color: #fff;
     font-size:16px;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
+    height: 100%;
 }
 
 main {
@@ -14,25 +23,53 @@ main {
     overflow-x: hidden;
 }
 
-body > header, body > footer {
-    width: 100vw;
-}
-
 nav li:hover {
-    color: blue;
+    color: #04d9ff;
+    background-color: #fff;
+    box-shadow: 0 0 7px #fff, 
+    0 0 10px #fff, 
+    0 0 42px #fff;
     cursor: pointer;
 }
 
 ul {
-    margin:0;
+    margin: 0;
+    padding-left: 0;
 }
 
 header {
-    height: 120px;
+    background: linear-gradient(blue, var(--pink80));
 }
 
 footer {
-    height: 40px;
+    background: linear-gradient(to top, blue, var(--pink80));
+}
+
+header, footer {
+    height: 80px;
+    width: 100vw;
+}
+
+header ul ,footer ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none ;
+    padding-top: 15px;
+}
+
+header li, footer li {
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 7px var(--neon-blue), 
+    0 0 10px var(--neon-blue), 
+    0 0 42px var(--neon-blue);
+}
+
+footer li {
+    width: 20vw;
+    text-align: center;
 }
 
 table {
@@ -40,12 +77,48 @@ table {
 }
 
 form {
-    display: grid;
     padding: 10px 15px;
 }
 
-form > input {
+td {
+    border: 2px solid var(--pink80);
+    box-shadow: 0 0 7px #fff, 
+    0 0 10px #fff,
+    inset 0 0 7px #fff, 
+    inset 0 0 10px #fff;
+    margin: 0;
+    padding: 5px;
+}
+
+input {
+    background-color: var(--pink80);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    inset 0 0 7px #fff,
+    inset 0 0 10px #fff;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+}
+
+input:hover {
+    box-shadow: 0 0 7px var(--neon-blue), 
+    0 0 10px var(--neon-blue), 
+    0 0 42px var(--neon-blue);
+}
+
+fieldset {
+    border: none;
     width: 40vw;
+    margin: auto;
+}
+
+fieldset > * {
+    display: flex;
 }
 
 form > label:nth-child(n+2) {
@@ -53,25 +126,34 @@ form > label:nth-child(n+2) {
 }
 
 button {
-    background-color: gray;
-    margin: 5px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 15px;
     border: none;
-    border-radius: 4px;
-    padding: 5px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 7px #fff, 
+    0 0 10px #fff, 
+    0 0 42px #fff;
+    color: var(--neon-blue);
+    font-size:16px;
+    font-family: 'Raleway', sans-serif;
+    width: 200px;
 }
 
 button:hover {
-    background-color: blue;
-    color: white;
+    color: #fff;
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 7px var(--neon-blue), 
+    0 0 10px var(--neon-blue), 
+    0 0 42px var(--neon-blue);
     cursor: pointer;
 }
 
 input.ng-valid {
-    border: none;
-    border-bottom: 1px solid green;
+    border-color: greenyellow;
 }
 
 input.ng-invalid {
-    border: none;
-    border-bottom: 1px solid red;
+    border-color: red;
 }

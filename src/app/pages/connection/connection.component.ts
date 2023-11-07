@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IConnect } from 'src/app/shared/models/i-connect';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-connection',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./connection.component.css']
 })
 export class ConnectionComponent {
-
+  constructor(public auth:AuthService){}
 }

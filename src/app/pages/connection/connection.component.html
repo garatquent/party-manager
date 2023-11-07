@@ -1,1 +1,17 @@
-<p>connection works!</p>
+<section>
+    <h1>Connect :</h1>
+    <form (submit)="auth.authentication()">
+        <fieldset>
+            <label for="">ID</label>
+            <input name="ID" [(ngModel)]="auth.authID.id">
+        </fieldset>
+
+        <fieldset>
+            <label for="">Password</label>
+            <input name="Password" [(ngModel)]="auth.authID.pass">
+        </fieldset>
+        
+        <button>Connect</button>
+        <button type="reset">RESET</button>
+    </form>
+</section>

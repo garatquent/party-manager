@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:'connection', component:ConnectionComponent},
   {path:'inscription', component:InscriptionComponent},
   {path:'legal', component:LegalComponent},
-  {path:'contact', component:ContactComponent}
+  {path:'contact', component:ContactComponent},
+  {path:'organization', loadChildren: () => import('./organization/organization.module').then(m => m.OrganizationModule)}
 ];
 
 @NgModule({
