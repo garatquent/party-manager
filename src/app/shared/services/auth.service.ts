@@ -10,6 +10,7 @@ export class AuthService {
 
   authID:{id:string, pass:string} = {id:'', pass:''};
   profile!:IUsers;
+  isLogged:boolean = false;
 
   constructor(private http:HttpClient, private route:Router) { }
 
@@ -18,6 +19,7 @@ export class AuthService {
       {
         next:p => {
           this.profile = p;
+          this.isLogged = true;
           this.route.navigateByUrl('/');
         },
         error:e => {

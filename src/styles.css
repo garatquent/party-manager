@@ -3,6 +3,7 @@
 :root {
     --pink80: rgb(230, 18, 124);
     --neon-blue: #04d9ff;
+    --bkg-blue: blue;
 }
 
 html, body{
@@ -38,11 +39,11 @@ ul {
 }
 
 header {
-    background: linear-gradient(blue, var(--pink80));
+    background: linear-gradient(var(--bkg-blue), var(--pink80));
 }
 
 footer {
-    background: linear-gradient(to top, blue, var(--pink80));
+    background: linear-gradient(to top, var(--bkg-blue), var(--pink80));
 }
 
 header, footer {
@@ -73,21 +74,38 @@ footer li {
 }
 
 table {
-    width:100vw;
+    width:calc(100vw - 80px);
+    margin: 40px;
+    border: 2px solid #fff;
+    border-radius: 5px;
 }
 
 form {
     padding: 10px 15px;
 }
 
-td {
-    border: 2px solid var(--pink80);
-    box-shadow: 0 0 7px #fff, 
-    0 0 10px #fff,
-    inset 0 0 7px #fff, 
+td, th {
+    box-shadow: inset 0 0 7px #fff, 
     inset 0 0 10px #fff;
     margin: 0;
     padding: 5px;
+    border: 2px solid #fff;
+}
+
+th {
+    box-shadow: inset 0 0 15px #fff, 
+    inset 0 0 20px #fff;
+}
+
+#click-event {
+    text-decoration: none;
+    color: var(--neon-blue);
+}
+
+#click-event:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 15px #fff, 
+    inset 0 0 20px #fff;
 }
 
 input {
@@ -106,9 +124,16 @@ input {
 }
 
 input:hover {
-    box-shadow: 0 0 7px var(--neon-blue), 
-    0 0 10px var(--neon-blue), 
-    0 0 42px var(--neon-blue);
+    box-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    inset 0 0 15px #fff, 
+    inset 0 0 20px #fff;
+}
+
+input::placeholder {
+    color: #fff;
+    text-align: center;
+    opacity: 60%;
 }
 
 fieldset {
@@ -156,4 +181,8 @@ input.ng-valid {
 
 input.ng-invalid {
     border-color: red;
+}
+
+#search-bar.ng-valid {
+    border-color: #fff;
 }

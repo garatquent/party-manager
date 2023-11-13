@@ -1,5 +1,12 @@
 <section>
     <h1>The events :</h1>
+
+    <form [formGroup]="searchForm">
+        <fieldset>
+            <input id="search-bar" formControlName="search" placeholder="Enter the event to search" />
+        </fieldset>
+    </form>
+
     <table>
         <thead>
             <tr>
@@ -11,8 +18,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let u of listEvents">
-                <td> {{ u.name }} </td>
+            <tr *ngFor="let u of listEvents | searchFilter: searchForm.value.search; let i=index">
+                <td id="click-event" [routerLink]="['/event', u.name]"> {{ u.name }}</td>
                 <td> {{ u.date }} </td>
                 <td> {{ u.location }} </td>
                 <td> {{ u.type }} </td>

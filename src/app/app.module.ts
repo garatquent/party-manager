@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -16,6 +16,8 @@ import { LegalComponent } from './pages/legal/legal.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { EventsService } from './shared/services/events.service';
+import { SearchFilterPipe } from './shared/pipe/search-filter.pipe';
+import { EventSelectComponent } from './pages/event-select/event-select.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,16 @@ import { EventsService } from './shared/services/events.service';
     InscriptionComponent,
     ConnectionComponent,
     LegalComponent,
-    ContactComponent
+    ContactComponent,
+    SearchFilterPipe,
+    EventSelectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
