@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "party-manager",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

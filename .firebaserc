@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-app-6775b": {
+      "hosting": {
+        "party-manager": [
+          "angular-app-6775b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-app-6775b"
+  }
+}

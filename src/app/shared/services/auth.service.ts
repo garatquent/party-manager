@@ -15,7 +15,7 @@ export class AuthService {
   constructor(private http:HttpClient, private route:Router) { }
 
   authentication() {
-    this.http.get<IUsers>(`/party-manager/assets/data/ids/${this.authID.id}@${this.authID.pass}.json`).subscribe(
+    this.http.get<IUsers>(`/assets/data/ids/${this.authID.id}@${this.authID.pass}.json`).subscribe(
       {
         next:p => {
           this.profile = p;
