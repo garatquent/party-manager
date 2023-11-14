@@ -20,7 +20,7 @@ export class UsersComponent {
   }
 
   public ngOnInit(): void {
-    const url:string = '/assets/data/users/users.json';
+    const url:string = '/party-manager/assets/data/users/users.json';
     this.http.get<Array<IUsers>>(url).subscribe((response) => {
       this.listUsers = response;
     }) 

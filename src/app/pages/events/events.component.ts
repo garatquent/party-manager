@@ -21,7 +21,7 @@ export class EventsComponent implements OnInit{
   }
 
   public ngOnInit(): void {
-    const url:string = '/assets/data/events/events.json';
+    const url:string = '/party-manager/assets/data/events/events.json';
     this.http.get<Array<IEvents>>(url).subscribe((response) => {
       this.listEvents = response;
     }) 
