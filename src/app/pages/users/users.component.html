@@ -1,5 +1,12 @@
 <section>
     <h1>The users :</h1>
+
+    <form [formGroup]="searchForm">
+        <fieldset>
+            <input id="search-bar" formControlName="search" placeholder="Enter the user to search" />
+        </fieldset>
+    </form>
+
     <table>
         <thead>
             <tr>
@@ -10,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let u of listUsers">
+            <tr *ngFor="let u of listUsers | searchFilter: searchForm.value.search">
                 <td> {{ u.name }} </td>
                 <td> {{ u.firstname }} </td>
                 <td> {{ u.mail }} </td>

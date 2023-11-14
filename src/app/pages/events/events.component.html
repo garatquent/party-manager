@@ -18,8 +18,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let u of listEvents | searchFilter: searchForm.value.search; let i=index">
-                <td id="click-event" [routerLink]="['/event', u.name]"> {{ u.name }}</td>
+            <tr id="click-event" [routerLink]="['/event', u.name]" *ngFor="let u of listEvents | searchFilter: searchForm.value.search; let i=index">
+                <td> {{ u.name }}</td>
                 <td> {{ u.date }} </td>
                 <td> {{ u.location }} </td>
                 <td> {{ u.type }} </td>

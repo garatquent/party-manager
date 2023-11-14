@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { IUsers } from 'src/app/shared/models/i-users';
 
 @Component({
@@ -7,9 +9,20 @@ import { IUsers } from 'src/app/shared/models/i-users';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-  listUsers:Array<IUsers> = [
-    {name:'Garat',firstname:'Quentin',mail:'quentin.garat@gmail.com',status:'super_admin'},
-    {name:'Man',firstname:'Bat',mail:'bat.man@gmail.com',status:'user'},
-    {name:'Man',firstname:'Super',mail:'super.man@gmail.com',status:'admin'}
-  ]
+  listUsers:Array<IUsers> = [];
+
+  searchForm;
+
+  constructor(private formBuilder: FormBuilder, private http:HttpClient) {
+    this.searchForm = this.formBuilder.group({
+      search: '',
+    });
+  }
+
+  public ngOnInit(): void {
+    const url:string = '/assets/data/users/users.json';
+    this.http.get<Array<IUsers>>(url).subscribe((response) => {
+      this.listUsers = response;
+    }) 
+  }
 }

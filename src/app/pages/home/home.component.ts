@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  title = 'party-manager'
-  description = 'Party Manager, the app that manage your parties !'
+  title = 'Party Manager'
+  description = 'Welcome to Party Manager, the app that manage your parties in the 80\'s futurist style !'
 }
