@@ -209,6 +209,26 @@ input.ng-invalid {
     margin-left: 100px;
 }
 
-h2 > p {
-    margin-top: 50px;
+#legal-txt {
+    margin-top: 60px;
+    position: absolute;
+    z-index: 40;
+    width: 70vw;
+    left: 15vw;
+}
+
+#legal-txt > p {
+    margin: 30px;
+}
+
+#legal-img {
+    opacity: 40%;
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60vw;
+    z-index: 0;
+    max-height: 60vh;
+    margin: auto;
 }
