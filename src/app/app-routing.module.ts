@@ -5,7 +5,7 @@ import { ProfileComponent }     from './pages/profile/profile.component';
 import { UsersComponent }       from './pages/users/users.component';
 import { EventsComponent }      from './pages/events/events.component';
 import { ConnectionComponent }  from './pages/connection/connection.component';
-import { InscriptionComponent } from './pages/inscription/inscription.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
 import { LegalComponent }       from './pages/legal/legal.component';
 import { ContactComponent }     from './pages/contact/contact.component';
 import { EventSelectComponent } from './pages/event-select/event-select.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'events',       component:EventsComponent},
   {path:'event/:fiesta',component:EventSelectComponent},
   {path:'connection',   component:ConnectionComponent},
-  {path:'inscription',  component:InscriptionComponent},
+  {path:'registration',  component:RegistrationComponent},
   {path:'legal',        component:LegalComponent},
   {path:'contact',      component:ContactComponent},
   {path:'organization', loadChildren:

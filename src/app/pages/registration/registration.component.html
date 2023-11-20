@@ -1,0 +1,44 @@
+<section>
+    <h1>Need help ?</h1>
+    <h2>Leave a message :</h2>
+    <form>
+        <fieldset>
+            <label for="">Name</label>
+            <input name="Name" [(ngModel)]="sub.name" #ctlName="ngModel" required minlength="8" >
+            <span *ngIf="ctlName.value.length < 8">This field needs at least 8 characters</span>
+        </fieldset>
+        
+        <fieldset>
+            <label for="">Firstname</label>
+            <input name="Firstname" [(ngModel)]="sub.firstname">
+        </fieldset>
+
+        <fieldset>
+            <label for="">Age</label>
+            <input name="Age" [(ngModel)]="sub.age">
+        </fieldset>
+        
+        <fieldset>
+            <label for="">Mail</label>
+            <input name="Mail" [(ngModel)]="sub.mail">
+        </fieldset>
+
+        <fieldset>
+            <label for="">Status</label>
+            <input name="Status" [(ngModel)]="sub.status">
+        </fieldset>
+
+        <fieldset>
+            <label for="">Infos</label>
+            <input name="Infos" [(ngModel)]="sub.infos">
+        </fieldset>
+
+        <fieldset>
+            <button>Send Message</button>
+        </fieldset>
+
+        <fieldset>
+            <button type="reset">Changed My Mind</button>
+        </fieldset>
+    </form>
+</section>

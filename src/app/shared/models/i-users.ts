@@ -1,7 +1,7 @@
 export interface IUsers {
     name:string;
     firstname:string;
-    mail:string;
+    email:string;
     status:string;
 }
 

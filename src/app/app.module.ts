@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { EventsComponent } from './pages/events/events.component';
-import { InscriptionComponent } from './pages/inscription/inscription.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { LegalComponent } from './pages/legal/legal.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -33,7 +33,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     UsersComponent,
     ProfileComponent,
     EventsComponent,
-    InscriptionComponent,
+    RegistrationComponent,
     ConnectionComponent,
     LegalComponent,
     ContactComponent,

@@ -4,7 +4,7 @@
         <li routerLink="/events"> Events</li>
         <li routerLink="/users"> Users</li>
         <li routerLink="/profile" *ngIf="auth.isLogged"> Profile</li>
-        <li routerLink="/inscription" *ngIf="!auth.isLogged"> Inscription</li>
+        <li routerLink="/registration" *ngIf="!auth.isLogged"> Registration</li>
         <li routerLink="/connection" *ngIf="!auth.isLogged"> Connection</li>
         <li routerLink="/" (click)="auth.isLogged = false" *ngIf="auth.isLogged"> Disconnection</li>
     </ul>
